@@ -1,19 +1,15 @@
 import React, {Component} from 'react';
-import { createAppContainer, createBottomTabNavigator } from "react-navigation";
-import { HomeScreen } from "./home";
+
+import { View, Text } from "react-native";
 
 interface Props {}
-
-const appNavigator = createBottomTabNavigator({
-  Home: HomeScreen
-});
-
-const AppNavigator = createAppContainer(appNavigator);
 
 export default class App extends Component<Props> {
   render() {
     return (
-      <AppNavigator />
+      <View style={{flex:1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Invoice Application</Text>
+      </View>
     );
   }
 }
